@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Оформление заказа</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header class="menu">
+        <div class="container">
+            <menu class="header-menu">
+                <li class="main-btn"><a href="main.html">Главная</a></li>
+                <li class="center-btn"><a href="contacts.html">Контакты</a></li>
+                <li class="cart-btn"><a href="cart.html">Корзина</a></li>
+            </menu>
+        </div>
+    </header>
+
+    <main class="container placing-order">
+        <h1>Заполнение деталей заказа</h1>
+        <form id="orderForm">
+            <div class="form-group">
+                <label for="fullName">ФИО:</label>
+                <input type="text" id="fullName" name="fullName" required />
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+                <label for="phone">Телефон:</label>
+                <input type="tel" id="phone" name="phone" required placeholder="+7-___-___-____" />
+            </div>
+            <div class="form-group">
+                <label for="address">Адрес доставки:</label>
+                <textarea id="address" name="address" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="comment">Комментарий:</label>
+                <textarea id="comment" name="comment" rows="2"></textarea>
+            </div>
+            <div class="form-group-total">
+                <p>Итоговая стоимость: <span id="orderTotal"></span></p>
+            </div>
+            <button class="res-submit-btn" id="subBtnRes">Оформить заказ</button>
+        </form>
+
+        <div id="orderConfirmation" style="display:none; text-align:center; padding: 20px;">
+            <h1 style="font-size: 36px;">ЗАКАЗ ОФОРМЛЕН</h1>
+            <p style="font-size: 20px; margin: 20px 0;">Номер заказа: <span id="orderNumber"></span></p>
+            <p style="font-size: 18px; margin: 20px 0;">Менеджер вскоре свяжется с вами для подтверждения деталей заказа.</p>
+            <button id="backToMainBtn" class="order-btn">На главную</button>
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

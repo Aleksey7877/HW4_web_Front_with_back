@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Корзина</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header class="menu">
+    <div class="container">
+      <menu class="header-menu">
+        <li class="main-btn"><a href="main.html">Главная</a></li>
+        <li class="center-btn"><a href="contacts.html">Контакты</a></li>
+        <li class="cart-btn"><a href="cart.html">Корзина</a></li>
+      </menu>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="main-order">Оформление заказа</h1>
+    <table class="cart-table">
+      <thead>
+        <tr class="order-menu">
+          <th>Позиция</th>
+          <th>Стоимость, руб</th>
+          <th>Количество</th>
+          <th>Итого</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="cartBody">
+      </tbody>
+    </table>
+
+    <div class="cart-summary">
+      <span class="summary-text">Итого стоимость товаров: <strong id="totalSum">0</strong> руб</span>
+      <button id="orderBtn" class="order-btn">Оформить заказ</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
